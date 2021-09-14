@@ -6,19 +6,19 @@ app.use(express.json());
 
 const port = 3000;
 
-app.post("/cats", async (req, res) => {
+app.post("/users", async (req, res) => {
   console.log("POST !! " + req.body);
   const newUser = new User({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     birthday: req.body.birthday,
     mobilephone: req.body.mobilephone,
-    address: {
-      address_number: req.body.address.address_number,
-      tambon: req.body.address.tambon,
-      district: req.body.address.district,
-      province: req.body.address.province,
-      postcode: req.body.address.postcode,
+    address_info: {
+      address_number: req.body.address_info.address_number,
+      tambon: req.body.address_info.tambon,
+      district: req.body.address_info.district,
+      province: req.body.address_info.province,
+      postcode: req.body.address_info.postcode,
     },
     id_document: {
       id_number: req.body.id_document.id_number,
