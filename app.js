@@ -11,10 +11,6 @@ app.post("/cats", async (req, res) => {
 });
 
 app.get("/cats", async (req, res) => {
-  console.log(res);
-});
-
-app.get("/", async (req, res) => {
   let results = await Cat.find({}).exec();
   console.log(results);
   res.send("Hello RinChan");
