@@ -2,6 +2,8 @@ const express = require("express");
 const { connectMongo, Cat } = require("./mongo");
 
 const app = express();
+app.use(express.json());
+
 const port = 3000;
 
 app.post("/cats", async (req, res) => {
