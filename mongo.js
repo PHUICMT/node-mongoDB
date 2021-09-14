@@ -3,12 +3,12 @@ const connectMongo = () => {
   return mongoose.connect("mongodb://localhost:27017/test");
 };
 
-const User = mongoose.model("User", {
+const User = mongoose.model("Users", {
   first_name: String,
   last_name: String,
-  birthday: Date,
+  birthday: String,
   mobilephone: String,
-  address: {
+  address_info: {
     address_number: String,
     tambon: String,
     district: String,
@@ -32,8 +32,8 @@ const User = mongoose.model("User", {
     advisor_name: String,
   },
   salary: {
-    salary_per_day: Number,
-    salary_part_time: Number,
+    salary_per_day: String,
+    salary_part_time: String,
   },
   discord_account: String,
 });
