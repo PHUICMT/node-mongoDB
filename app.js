@@ -42,7 +42,7 @@ app.post("/cats", async (req, res) => {
     },
     discord_account: req.body.discord_account,
   });
-  newCats.save().then(() => res.send("posted!!"));
+  newUser.save().then(() => res.send("posted!!"));
 });
 
 connectMongo().then(() => {
